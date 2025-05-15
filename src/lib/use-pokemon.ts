@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import { pokemonAPI } from "./pokemon-api";
 
-export function usePokemonList() {
+export function usePokemonList(limit: number = 20, offset: number = 0) {
   return useQuery({
-    queryKey: ["pokemonList"],
-    queryFn: () => pokemonAPI.getPokemonList(),
+    queryKey: ["pokemonList", limit, offset],
+    queryFn: () => pokemonAPI.getPokemonList(limit, offset),
   });
 }
 
