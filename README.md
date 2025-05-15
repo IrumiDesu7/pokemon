@@ -1,54 +1,80 @@
-# React + TypeScript + Vite
+# Pokemon Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application that leverages the Pokemon API to display and explore Pokemon data.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Browse a list of Pokemon with pagination
+- Sort Pokemon by name (ascending/descending)
+- View detailed information about each Pokemon
+- Responsive design with Tailwind CSS
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 19 with TypeScript
+- Vite for fast development and building
+- React Router for navigation
+- Zustand for state management
+- TanStack Query for API data fetching
+- Tailwind CSS for styling
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18+)
+- pnpm (v10+)
+
+### Installation
+
+```bash
+# Install dependencies
+pnpm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+# Start the development server
+pnpm dev
 ```
+
+### Build
+
+```bash
+# Build for production
+pnpm build
+```
+
+### Preview
+
+```bash
+# Preview production build
+pnpm preview
+```
+
+### Linting
+
+```bash
+# Run ESLint
+pnpm lint
+```
+
+## Project Structure
+
+```
+pokemon/
+├── public/            # Static assets
+├── src/
+│   ├── assets/        # Images, fonts, etc.
+│   ├── components/    # React components
+│   │   └── ui/        # Reusable UI components
+│   ├── lib/           # Utility functions and config
+│   ├── store/         # Zustand state management
+│   └── types/         # TypeScript type definitions
+└── ...config files
+```
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
