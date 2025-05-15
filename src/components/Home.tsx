@@ -57,8 +57,8 @@ export const Home = () => {
   return (
     <div>
       <div className="flex justify-between items-center mb-6">
-        <h1>Pokemon List</h1>
-        <div className="flex items-center">
+        <h1 className="text-xl font-bold">Pokemon List</h1>
+        <div className="flex items-center space-x-2">
           <SearchBar query={query} setQuery={setQuery} />
           <Sort />
         </div>

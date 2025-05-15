@@ -5,10 +5,10 @@ interface SearchBarProps {
 
 const SearchBar = ({ query, setQuery }: SearchBarProps) => {
   return (
-    <div>
+    <div className="mr-4">
       <input
-        className="border border-black"
-        placeholder="type here to search"
+        className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        placeholder="Type here to search"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />

@@ -3,18 +3,22 @@ import usePokemonStore from "../../store/pokemon-store";
 export const Sort = () => {
   const { setSort, sort } = usePokemonStore();
   return (
-    <div>
+    <div className="inline-flex rounded-md shadow-sm">
       <button
-        className={` p-2 rounded ${
-          sort === "asc" ? "bg-blue-500 text-white" : ""
+        className={`px-3 py-2 text-sm font-medium rounded-l-md border border-gray-300 ${
+          sort === "asc"
+            ? "bg-blue-500 text-white border-blue-500"
+            : "bg-white text-gray-700 hover:bg-gray-50"
         }`}
         onClick={() => setSort("asc")}
       >
         Asc
       </button>
       <button
-        className={` p-2 rounded ${
-          sort === "desc" ? "bg-blue-500 text-white" : ""
+        className={`px-3 py-2 text-sm font-medium rounded-r-md border border-gray-300 border-l-0 ${
+          sort === "desc"
+            ? "bg-blue-500 text-white border-blue-500"
+            : "bg-white text-gray-700 hover:bg-gray-50"
         }`}
         onClick={() => setSort("desc")}
       >
